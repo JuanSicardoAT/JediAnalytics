@@ -49,13 +49,11 @@ select opt in "${MENU_OPTIONS[@]}"; do
   case $REPLY in
 
   1)
-    showNewPage
     echo "$SELECT_CONFIRMATION_MESSAGE$opt"
     askConfirmation
     ;;
 
   2)
-    showNewPage
     echo "$SELECT_CONFIRMATION_MESSAGE$opt"
     ;;
 
