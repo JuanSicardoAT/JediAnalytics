@@ -23,6 +23,7 @@ function showNewPage() {
   echo "$TITLE"
 }
 
+#Shows a confirmation message for safety reasons
 function askConfirmation() {
   echo "$PROMPT_CONFIRMATION"
   select conf in "${CONFIRMATION_OPTIONS[@]}"; do
@@ -44,53 +45,54 @@ function askConfirmation() {
 
 showNewPage
 
+#Menu of possible actions
 PS3="$PROMPT_SELECT"
-select opt in "${MENU_OPTIONS[@]}"; do
+select selectedOption in "${MENU_OPTIONS[@]}"; do
   case $REPLY in
 
   1)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
     ;;
 
   2)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   3)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   4)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   5)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   6)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   7)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   8)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   9)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   10)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     ;;
 
   11)
-    echo "$SELECT_CONFIRMATION_MESSAGE$opt"
+    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     echo "$GOODBYE_MESSAGE"
     break
     ;;
