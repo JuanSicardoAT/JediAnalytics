@@ -1,4 +1,0 @@
-select clt_relacion_cta_clte.cod_cliente, clt_relacion_cta_clte.numCuenta, clt_sucursal.id_sucursal
-FROM clt_relacion_cta_clte
-FULL JOIN clt_sucursal
-ON clt_relacion_cta_clte.cod_cliente = clt_sucursal.cod_cliente
