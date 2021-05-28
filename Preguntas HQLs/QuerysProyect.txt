@@ -1,0 +1,59 @@
+------------------------- PREGUNTA 1 --------------------------
+
+SELECT COUNT (DISTINCT id_sucursal) FROM clt_sucursal;
+
+------------------------- PREGUNTA 2 --------------------------
+
+select clt_tipo, count(*) * 100.0 / sum(count(*)) over()
+from clt_datos
+group by clt_tipo;
+
+------------------------- PREGUNTA 3 --------------------------
+
+SELECT count(clt_documentacion.clt_tipo_doc) FROM clt_documentación
+FULL OUTER JOIN clt_datos
+on clt_documentacion.cod_cliente =  clt_datos.cod_cliente
+GROUP BY clt_tipo_doc;
+
+------------------------- PREGUNTA 4 --------------------------
+
+CREATE TABLE edad
+SELECT cod_cliente, year(current_date()) - year(clt_fec_nac) 
++
+if(date_format(current_date(), "%M %d") > date_format(clt_fec_nac, "%M %d"), 0, -1 )
+as Edad
+FROM clt_datos
+where clt_tipo = 1;
+
+SELECT avg(edad)
+from edad;
+
+------------------------- PREGUNTA 5 --------------------------
+
+Select distinct clt_nacionalidad from clt_datos;
+
+Select count(Distinct clt_nacionalidad) from clt_datos;
+
+------------------------- PREGUNTA 6 --------------------------
+
+SELECT SUBSTRING(
+clt_contac, LOCATE('@', clt_contac)+1, 
+ LENGTH(clt_contac)-LOCATE('@',clt_contac)
+)AS dominio, 
+COUNT(clt_contac) as Cantidad_Dominio 
+FROM 
+email 
+GROUP BY SUBSTRING(
+clt_contac, LOCATE('@', clt_contac)+1,
+LENGTH(clt_contac)-LOCATE('@', clt_contac));
+
+------------------------- PREGUNTA 7 --------------------------
+
+
+------------------------- PREGUNTA 8 --------------------------
+
+------------------------- PREGUNTA 9 --------------------------
+
+------------------------- PREGUNTA 10 -------------------------
+
+
