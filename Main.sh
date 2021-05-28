@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+BASH_FILES_HOME="BashFiles/"
+
 TITLE="==== JediAnalytics Demo ===="
 
 PROMPT_SELECT="--Por favor elija una opción: "
@@ -54,8 +56,8 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   1)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./UploadFilesToHDFS.sh
-    ./CheckHDFS.sh
+    ./${BASH_FILES_HOME}UploadFilesToHDFS.sh
+    ./${BASH_FILES_HOME}CheckHDFS.sh
     ;;
 
   2)
@@ -63,27 +65,29 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     askConfirmation
     askConfirmation
     askConfirmation
-    ./DeleteFilesFromHDFS.sh
-    ./CheckHDFS.sh
+    ./${BASH_FILES_HOME}DeleteFilesFromHDFS.sh
+    ./${BASH_FILES_HOME}CheckHDFS.sh
     ;;
 
   3)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./CreateDatabase.sh
-    ./ShowDatabases.sh
+    ./${BASH_FILES_HOME}CreateDatabase.sh
+    ./${BASH_FILES_HOME}ShowDatabases.sh
     ;;
 
   4)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./DeleteDatabase.sh
-    ./ShowDatabases.sh
+    ./${BASH_FILES_HOME}DeleteDatabase.sh
+    ./${BASH_FILES_HOME}ShowDatabases.sh
     ;;
 
   5)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    ./${BASH_FILES_HOME}CreateExternalTables.sh
+    ./${BASH_FILES_HOME}SelectAllExternalTables.sh
     ;;
 
   6)
