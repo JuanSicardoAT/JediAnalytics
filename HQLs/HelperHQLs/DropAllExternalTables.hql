@@ -1,4 +1,4 @@
-use equipo5;
+use jedianalytics;
 DROP TABLE IF EXISTS cat_tipo_clt;
 DROP TABLE IF EXISTS cat_tipo_contac;
 DROP TABLE IF EXISTS cat_tipo_docum;
