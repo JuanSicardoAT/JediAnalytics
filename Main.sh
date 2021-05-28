@@ -4,7 +4,7 @@ TITLE="==== JediAnalytics Demo ===="
 
 PROMPT_SELECT="--Por favor elija una opción: "
 SELECT_CONFIRMATION_MESSAGE="--Seleccionó: "
-INVALID_OPTION_MESSAGE="--Opción inválida... Saliendo"
+INVALID_OPTION_MESSAGE="--Opción inválida..."
 MENU_OPTIONS=("Subir archivos a HDFS" "Borrar archivos de HDFS"
   "Crear base de datos en Hive" "Borrar base de datos en Hive"
   "Crear tablas externas en Hive" "Borrar tablas externas en Hive"
@@ -15,7 +15,7 @@ GOODBYE_MESSAGE="--Saliendo"
 
 PROMPT_CONFIRMATION="--¿Está seguro?"
 YES_CONFIRMATION_MESSAGE="--Ejecutando"
-NO_CONFIRMATION_MESSAGE="--Saliendo"
+NO_CONFIRMATION_MESSAGE="--Cancelado..."
 CONFIRMATION_OPTIONS=("Si" "No")
 
 function showNewPage() {
@@ -35,6 +35,7 @@ function askConfirmation() {
 
     "${CONFIRMATION_OPTIONS[1]}")
       echo "$NO_CONFIRMATION_MESSAGE"
+      echo "$GOODBYE_MESSAGE"
       exit
       ;;
 
@@ -53,42 +54,55 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   1)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    ./UploadFilesToHDFS.sh
+    ./CheckHDFS.sh
     ;;
 
   2)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
+    ./DeleteFilesFromHDFS.sh
+    ./CheckHDFS.sh
     ;;
 
   3)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   4)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   5)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   6)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   7)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   8)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   9)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   10)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
     ;;
 
   11)
@@ -99,9 +113,12 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
 
   *)
     echo "$INVALID_OPTION_MESSAGE"
+    echo "$GOODBYE_MESSAGE"
     exit
     ;;
 
   esac
   break
 done
+
+echo "$GOODBYE_MESSAGE"
