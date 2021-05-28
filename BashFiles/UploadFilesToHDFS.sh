@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LOCAL_TEXT_FILES_HOME="TextFiles/"
+LOCAL_TEXT_FILES_HOME="./TextFiles/"
 HDFS_TEXT_FILES_HOME="/dev/equipo5/JediAnalytics/"
 
 UPLOADING_MESSAGE="--Se están subiendo los archivos a HDFS en la carpeta:
