@@ -1,13 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-CLOUDERAHOME="/home/cloudera/Documents/Materiales/equipo5/tablasExternas"
-HDFSHOME="/dev/equipo5/clients"
+HDFS_TEXT_FILES_HOME="/dev/equipo5/JediAnalytics/"
 
-hdfs dfs -rm -r ${HDFSHOME}/CAT_TIPO_CLT
-hdfs dfs -rm -r ${HDFSHOME}/CAT_TIPO_CONTAC
-hdfs dfs -rm -r ${HDFSHOME}/CAT_TIPO_DOCUM
-hdfs dfs -rm -r ${HDFSHOME}/CLT_CONTACTABILIDAD
-hdfs dfs -rm -r ${HDFSHOME}/CLT_DATOS
-hdfs dfs -rm -r ${HDFSHOME}/CLT_DOCUMENTACION
-hdfs dfs -rm -r ${HDFSHOME}/CLT_RELACION_CTA_CLTE
-hdfs dfs -rm -r ${HDFSHOME}/CLT_SUCURSAL
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CAT_TIPO_CLT
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CAT_TIPO_CONTAC
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CAT_TIPO_DOCUM
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_CONTACTABILIDAD
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_DATOS
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_DOCUMENTACION
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_RELACION_CTA_CLTE
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_SUCURSAL
