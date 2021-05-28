@@ -5,10 +5,10 @@ ASK_DB_NAME="--Ingrese el nombre de la base de datos: "
 DROPPING_DB_MESSAGE="--Se está borrando la base de datos "
 
 #Shows a confirmation message for safety reasons
-function askConfirmation() {
+function askConfirmationAgain() {
   echo "$PROMPT_CONFIRMATION"
-  select conf in "${CONFIRMATION_OPTIONS[@]}"; do
-    case $conf in
+  select confAgain in "${CONFIRMATION_OPTIONS[@]}"; do
+    case $confAgain in
 
     "${CONFIRMATION_OPTIONS[0]}")
       echo "$YES_CONFIRMATION_MESSAGE"
@@ -27,7 +27,7 @@ function askConfirmation() {
 
 echo "$ASK_DB_NAME"
 read -r dbName
+askConfirmationAgain
 
 echo "$DROPPING_DB_MESSAGE"
-askConfirmation
 hive -e "DROP DATABASE IF EXISTS $dbName"
