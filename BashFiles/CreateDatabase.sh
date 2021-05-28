@@ -27,7 +27,7 @@ function askConfirmation() {
 
 echo "$ASK_DB_NAME"
 read -r dbName
-askConfirmation
 
 echo "$CREATING_DB_MESSAGE $dbName"
+askConfirmation
 hive -e "CREATE DATABASE IF NOT EXISTS $dbName"

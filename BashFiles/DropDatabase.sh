@@ -27,8 +27,7 @@ function askConfirmation() {
 
 echo "$ASK_DB_NAME"
 read -r dbName
-askConfirmation
 
 echo "$DROPPING_DB_MESSAGE"
-
+askConfirmation
 hive -e "DROP DATABASE IF EXISTS $dbName"
