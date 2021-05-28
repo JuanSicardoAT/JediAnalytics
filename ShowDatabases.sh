@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-hive -e "'SHOW DATABASES'"
+hive -e "SHOW DATABASES"
