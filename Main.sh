@@ -68,6 +68,8 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   3)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    ./CreateDatabase.sh
+    ./ShowDatabases.sh
     ;;
 
   4)
