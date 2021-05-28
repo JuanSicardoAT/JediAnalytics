@@ -78,6 +78,7 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
     ./DeleteDatabase.sh
+    ./ShowDatabases.sh
     ;;
 
   5)

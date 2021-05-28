@@ -1,11 +1,11 @@
 use equipo5;
 
-CREATE EXTERNAL TABLE IF NOT EXISTS CAT_TIPO_CLT
+create external table if not exists CLT_RELACION_CTA_CLTE
 (
-clt_tipo string,
-descripcion string
+cod_cliente string,
+numCuenta string
 )
 ROW FORMAT delimited fields terminated by '\u0059' lines terminated by '\n'
 STORED AS textfile
-LOCATION '/dev/equipo5/clients/CAT_TIPO_CLT'
+LOCATION '/dev/equipo5/JediAnalytics/CLT_RELACION_CTA_CLTE/'
 tblproperties("skip.header.line.count" = "1");
