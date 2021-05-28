@@ -57,21 +57,18 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
     ./${BASH_FILES_HOME}UploadFilesToHDFS.sh
-    ./${BASH_FILES_HOME}CheckHDFS.sh
+    ./${BASH_FILES_HOME}ShowHDFSHome.sh
     ;;
 
   2)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    askConfirmation
-    askConfirmation
     ./${BASH_FILES_HOME}DeleteFilesFromHDFS.sh
-    ./${BASH_FILES_HOME}CheckHDFS.sh
+    ./${BASH_FILES_HOME}ShowHDFSHome.sh
     ;;
 
   3)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
-    askConfirmation
     ./${BASH_FILES_HOME}CreateDatabase.sh
     ./${BASH_FILES_HOME}ShowDatabases.sh
     ;;
@@ -93,8 +90,6 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
 
   6)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
-    askConfirmation
-    askConfirmation
     askConfirmation
     ./${BASH_FILES_HOME}DropAllExternalTables.sh
     ./${BASH_FILES_HOME}ShowTables.sh
