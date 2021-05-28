@@ -2,7 +2,7 @@
 
 ASK_DB_NAME="--Ingrese el nombre de la base de datos: "
 
-CREATING_DB_MESSAGE="Se está creando la base de datos "
+CREATING_DB_MESSAGE="--Se está creando la base de datos "
 
 #Shows a confirmation message for safety reasons
 function askConfirmation() {

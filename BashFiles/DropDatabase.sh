@@ -2,7 +2,7 @@
 
 ASK_DB_NAME="--Ingrese el nombre de la base de datos: "
 
-DROPPING_DB_MESSAGE="Se está borrando la base de datos "
+DROPPING_DB_MESSAGE="--Se está borrando la base de datos "
 
 #Shows a confirmation message for safety reasons
 function askConfirmation() {
