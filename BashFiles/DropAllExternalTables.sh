@@ -2,4 +2,4 @@
 
 HELPER_HQLS_HOME="HQLs/HelperHQLs/"
 
-hive -f "${HELPER_HQLS_HOME}SelectAllExternalTables.hql"
+hive -f "${HELPER_HQLS_HOME}DropAllExternalTables.hql"

@@ -79,20 +79,24 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   4)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./${BASH_FILES_HOME}DeleteDatabase.sh
+    ./${BASH_FILES_HOME}DropDatabase.sh
     ./${BASH_FILES_HOME}ShowDatabases.sh
     ;;
 
   5)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./${BASH_FILES_HOME}CreateExternalTables.sh
+    ./${BASH_FILES_HOME}CreateAllExternalTables.sh
     ./${BASH_FILES_HOME}SelectAllExternalTables.sh
     ;;
 
   6)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    askConfirmation
+    askConfirmation
+    ./${BASH_FILES_HOME}DropAllExternalTables.sh
+    ./${BASH_FILES_HOME}SelectAllExternalTables.sh
     ;;
 
   7)
