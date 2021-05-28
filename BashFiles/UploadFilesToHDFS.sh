@@ -3,7 +3,7 @@
 LOCAL_TEXT_FILES_HOME="TextFiles/"
 HDFS_TEXT_FILES_HOME="/dev/equipo5/JediAnalytics/"
 
-UPLOADING_MESSAGE="--Se están subiendo los archivos a HDFS en la carpeta
+UPLOADING_MESSAGE="--Se están subiendo los archivos a HDFS en la carpeta:
   $HDFS_TEXT_FILES_HOME"
 
 echo "$UPLOADING_MESSAGE"
