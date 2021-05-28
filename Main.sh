@@ -61,6 +61,8 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   2)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    askConfirmation
+    askConfirmation
     ./DeleteFilesFromHDFS.sh
     ./CheckHDFS.sh
     ;;
@@ -75,6 +77,7 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   4)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    ./DeleteDatabase.sh
     ;;
 
   5)
