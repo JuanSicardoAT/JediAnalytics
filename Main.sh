@@ -87,6 +87,7 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
     ./${BASH_FILES_HOME}CreateAllExternalTables.sh
+    ./${BASH_FILES_HOME}ShowTables.sh
     ./${BASH_FILES_HOME}SelectAllExternalTables.sh
     ;;
 
@@ -96,7 +97,7 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     askConfirmation
     askConfirmation
     ./${BASH_FILES_HOME}DropAllExternalTables.sh
-    ./${BASH_FILES_HOME}SelectAllExternalTables.sh
+    ./${BASH_FILES_HOME}ShowTables.sh
     ;;
 
   7)
