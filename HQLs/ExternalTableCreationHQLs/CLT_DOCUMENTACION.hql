@@ -1,4 +1,4 @@
-use equipo5;
+use jedianalytics;
 
 create external table if not exists CLT_DOCUMENTACION
 (

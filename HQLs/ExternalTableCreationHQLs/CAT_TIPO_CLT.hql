@@ -1,4 +1,4 @@
-USE equipo5;
+USE jedianalytics;
 
 CREATE EXTERNAL TABLE IF NOT EXISTS CAT_TIPO_CLT
 (

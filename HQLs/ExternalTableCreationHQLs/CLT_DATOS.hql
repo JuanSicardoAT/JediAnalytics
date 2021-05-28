@@ -1,4 +1,4 @@
-use equipo5;
+use jedianalytics;
 
 CREATE EXTERNAL TABLE IF NOT EXISTS CLT_DATOS(
 cod_cliente string,

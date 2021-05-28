@@ -7,5 +7,5 @@ shopt -s nullglob
 hqlFiles=("${CREATE_EXT_TABLES_HQLS_HOME}"*)
 
 for hqlFile in "${hqlFiles[@]}"; do
-  echo "$hqlFile"
+  hive -f "$hqlFile"
 done
