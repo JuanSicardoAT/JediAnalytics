@@ -116,12 +116,6 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     askConfirmation
     ;;
 
-  11)
-    echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
-    echo "$GOODBYE_MESSAGE"
-    break
-    ;;
-
   *)
     echo "$INVALID_OPTION_MESSAGE"
     echo "$GOODBYE_MESSAGE"

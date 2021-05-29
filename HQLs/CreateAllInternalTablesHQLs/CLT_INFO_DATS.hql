@@ -1,4 +1,4 @@
-USE equipo5;
+USE jedianalytics;
 CREATE TABLE IF NOT EXISTS CLT_INFO_DATS (
 cod_cliente string,
 clt_tipo_desc string,
