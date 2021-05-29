@@ -1,4 +1,4 @@
-use equipo5;
+use jedianalytics;
 
 select * from cat_tipo_clt_int limit 10;
 select * from cat_tipo_contac_int limit 10;

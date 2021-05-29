@@ -1,4 +1,4 @@
-use equipo5;
+use jedianalytics;
 
 CREATE EXTERNAL TABLE IF NOT EXISTS CLT_DATOS(
 cod_cliente string,
@@ -16,5 +16,5 @@ clt_fec_constitucion string
 )
 ROW FORMAT delimited fields terminated by ',' lines terminated by '\n'
 STORED AS textfile
-LOCATION '/dev/equipo5/clients/CLT_DATOS'
+LOCATION '/dev/equipo5/JediAnalytics/CLT_DATOS/'
 tblproperties("skip.header.line.count" = "1");

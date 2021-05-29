@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+HDFS_TEXT_FILES_HOME="/dev/equipo5/JediAnalytics/"
+
+DELETING_FILES_MESSAGE="--Se borrarán los archivos de HDFS en la carpeta:
+  $HDFS_TEXT_FILES_HOME"
+
+echo "$DELETING_FILES_MESSAGE"
+
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CAT_TIPO_CLT
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CAT_TIPO_CONTAC
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CAT_TIPO_DOCUM
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_CONTACTABILIDAD
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_DATOS
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_DOCUMENTACION
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_RELACION_CTA_CLTE
+hdfs dfs -rm -r ${HDFS_TEXT_FILES_HOME}CLT_SUCURSAL

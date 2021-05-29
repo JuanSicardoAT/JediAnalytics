@@ -1,12 +1,11 @@
-use equipo5;
+use jedianalytics;
 
-create external table if not exists CLT_DOCUMENTACION
+create external table if not exists CAT_TIPO_DOCUM
 (
-cod_cliente string,
 clt_tipo_doc string,
-clt_numdoc string
+descripcion string
 )
 ROW FORMAT delimited fields terminated by '|' lines terminated by '\n'
 STORED AS textfile
-LOCATION '/dev/equipo5/clients/CLT_DOCUMENTACION'
+LOCATION '/dev/equipo5/JediAnalytics/CAT_TIPO_DOCUM/'
 tblproperties("skip.header.line.count" = "1");
