@@ -1,3 +1,5 @@
+USE jedianalytics;
+
 CREATE TABLE edad
 SELECT cod_cliente, year(current_date()) - year(clt_fec_nac) 
 +

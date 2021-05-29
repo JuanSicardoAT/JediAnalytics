@@ -1,3 +1,5 @@
+use jedianalytics;
+
 CREATE table if NOT EXISTS inicialesAnio as
 SELECT cod_cliente,concat(regexp_extract(clt_nombre, '[A-Z]*',0),
 regexp_extract(clt_apellido_paterno, '[A-Z]*',0),

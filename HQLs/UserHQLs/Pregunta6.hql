@@ -1,3 +1,5 @@
+use jedianalytics;
+
 SELECT SUBSTRING(
 clt_contac, LOCATE('@', clt_contac)+1, 
  LENGTH(clt_contac)-LOCATE('@',clt_contac)
