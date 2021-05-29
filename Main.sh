@@ -107,6 +107,8 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   8)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
+    ./${BASH_FILES_HOME}DropAllInternalTables.sh
+    ./${BASH_FILES_HOME}ShowTables.sh
     ;;
 
   9)
