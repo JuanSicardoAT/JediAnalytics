@@ -1,4 +1,4 @@
-USE equipo5;
+USE jedianalytics;
 
 CREATE TABLE IF NOT EXISTS CLT_DOCUMENTACION_INT(
 cod_cliente string,
