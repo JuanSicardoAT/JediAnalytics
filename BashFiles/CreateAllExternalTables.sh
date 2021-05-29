@@ -5,6 +5,8 @@ CREATE_EXTERN_TABLES_HQLS_HOME="./HQLs/CreateAllExternalTablesHQLs/"
 CREATING_ALL_EXT_TABLES_MESSAGE="--Se están creando todas las tablas definidas en:
   $CREATE_EXTERN_TABLES_HQLS_HOME"
 
+echo "$CREATING_ALL_EXT_TABLES_MESSAGE"
+
 shopt -s nullglob
 
 hqlFiles=("${CREATE_EXTERN_TABLES_HQLS_HOME}"*)
