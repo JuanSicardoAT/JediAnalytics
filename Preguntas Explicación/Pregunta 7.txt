@@ -1,0 +1,9 @@
+Agregamos las dos columnas que pide la pregunta con la función add columns, especificamos el nombre
+de cada columna y su tipo de dato.
+
+con un insert overwrite reinsertamos todos los datos (overwrite no deja a solo x columnas, solo
+ deja a toda la tabla)  para tener las dos nuevas columnas, para conseguir el año solamente lo extraemos
+del campo clt_fec_nac con la función year, esta extra el año de un dato en formato de fecha.
+Para la columna de iniciales usamos la función de regex_extract, para conseguir la primera letra mayuscula
+de cada parte del nombre del cliente y las concatenamos con la funcion concat.
+

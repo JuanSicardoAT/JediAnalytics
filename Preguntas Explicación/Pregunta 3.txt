@@ -1,0 +1,5 @@
+Solo ocuparemos la tabla de documentacion.
+
+Ya que solo nos interesa saber sobre el tipo de documento y cuantas personas poseen estos, usamos un group
+by para agrupar los datos en base a los tipos de documento, y complementamos esto usando count para sumar
+la cantidad total de veces que aparecen cada tipo de documento.

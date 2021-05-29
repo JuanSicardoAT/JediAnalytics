@@ -1,0 +1,6 @@
+Ubicamos en que tabla vive los datos que queremos, los clientes morales y fisicos se encuentran
+en la tabla clt_datos.
+
+Pensamos en la operación que ocuparia este problema, al ser un porcentaje, lo ideal es utilizar la regla
+de 3; cantidad de clientes morales * 100/cantidad total de clientes
+
