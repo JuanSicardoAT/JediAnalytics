@@ -1,0 +1,6 @@
+
+Utilizamos la tabla de datos donde se encuentra la fecha de nacimiento,
+primero restamos el año actual coon el año de nacimiento y con ello 
+restamos uno si el dia y el mes si aun no ha pasado la fecha de su cumpleaños 
+se utilizo solamento los que son tipo moral, y el dato obtuvido de la edades
+se convirtio a entero ya se fue declarado como string  

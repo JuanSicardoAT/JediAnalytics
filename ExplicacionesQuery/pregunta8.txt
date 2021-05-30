@@ -1,0 +1,5 @@
+para crear una nueva tabla llamada clt_documentos_general
+se concatena el nombre y apellidos, se inserto una query para extraer que tipo de documento
+se esta extrayendo con ello, se hizo una comparacion donde son los tipos difrentes d documentos, 
+si el cliente tiene un documento pone el numero del documento, en caso de que no, advierte que 
+no esta disponible.

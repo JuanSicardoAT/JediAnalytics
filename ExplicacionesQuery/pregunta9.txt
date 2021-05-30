@@ -1,0 +1,8 @@
+
+se crea una nueva tabla llamada clt_personal
+
+se utilizaron 2 tablas clt_contactabilidad y  clt_datos
+se obtuvo la prioridad con con un gruop by para que no se repitieron los clientes 
+con su cierto numero de prioridad haciendo un join select
+despues selecionamos las personas que tienen clientes con un diferente query haciendo un join
+con eso join, se extrae, cod_cliente, nombre_completo, direccion, email y numero
