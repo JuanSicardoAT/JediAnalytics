@@ -1,6 +1,6 @@
 use jedianalytics;
 
-create table clt_personal as 
+create table if not exists clt_personal as 
 select 
 dat.cod_cliente codigo_cliente,
 concat (dat.clt_nombre, ' ' , dat.clt_apellido_paterno, ' ' , dat.clt_apellido_materno) 
@@ -28,3 +28,5 @@ from clt_contactabilidad con
 where con.clt_tipo_contac = '1'
 ) as em
 on em.cod_cliente = conta.cod_cliente;
+
+select * from clt_personal;

@@ -1,6 +1,6 @@
 use jedianalytics;
 
-create table clt_documentos_general as
+create table if not exists clt_documentos_general as
 select 
 datos.cod_cliente codigo_cliente,
 concat (datos.clt_nombre, ' ' , datos.clt_apellido_paterno, ' ' , datos.clt_apellido_materno) 
