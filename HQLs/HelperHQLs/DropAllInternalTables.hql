@@ -11,3 +11,5 @@ DROP TABLE IF EXISTS clt_info_dats;
 DROP TABLE IF EXISTS clt_info_cuenta;
 DROP TABLE IF EXISTS edad;
 DROP TABLE IF EXISTS iniciales_anio;
+DROP TABLE IF EXISTS clt_documentos_general;
+DROP TABLE IF EXISTS clt_personal;
