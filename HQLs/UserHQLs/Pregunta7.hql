@@ -29,5 +29,5 @@ d.clt_fec_constitucion
 inicialAnio.anio_nac,
 inicialAnio.iniciales
 from clt_datos_int d 
-left join iniciales_anio inicialAnio
+left join iniciales_anio as inicialAnio
 on d.cod_cliente=inicialAnio.cod_cliente;
