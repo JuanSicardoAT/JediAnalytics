@@ -114,13 +114,13 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
   9)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./${BASH_FILES_HOME}ExecuteUserHQL
+    ./${BASH_FILES_HOME}ExecuteUserHQL.sh
     ;;
 
   10)
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
-    ./${BASH_FILES_HOME}ExecuteAllHQLs
+    ./${BASH_FILES_HOME}ExecuteAllHQLs.sh
     ;;
 
   *)
