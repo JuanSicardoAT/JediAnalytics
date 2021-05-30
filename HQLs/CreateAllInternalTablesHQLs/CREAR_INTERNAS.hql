@@ -55,6 +55,9 @@ STORED AS parquet;
 insert overwrite table CLT_DATOS_INT
 select * from CLT_DATOS;
 
+alter table clt_datos_int
+add columns (anio_nac string, iniciales string);
+
 
 CREATE TABLE IF NOT EXISTS CLT_DOCUMENTACION_INT(
 cod_cliente string,
