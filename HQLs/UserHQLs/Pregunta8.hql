@@ -15,3 +15,5 @@ FROM CLT_DOCUMENTACION_INT cd
 JOIN CAT_TIPO_DOCUM_INT ctd
 ON cd.clt_tipo_doc = ctd.clt_tipo_doc) as documentos
 on datos.cod_cliente = documentos.cod_cliente;
+
+select * from clt_documentos_general;
