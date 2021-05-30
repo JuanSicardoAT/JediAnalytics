@@ -1,0 +1,5 @@
+Para que se agrupen los campos en base a un solo valor, en este caso el cod_cliente
+usamos en los demas campos la funcion MIN para que regrese el valor menor al realizar el agrupamiento
+esto se hace debido a que al querer regresar entre el valor del documento (el cual son numeros) y el valor
+ equivalente de "No disponible", al ser caracteres, siempre sera mayor al valor que tenga el documento, por
+ lo tanto, com min siempre regresara el campo con el valor del documento en vez de no disponible.
