@@ -19,4 +19,4 @@ regexp_extract(clt_apellido_paterno, '[A-Z]*',0),
 regexp_extract(clt_apellido_materno, '[A-Z]*',0))
 from clt_datos_int;
 
-SELECT * from 
+SELECT * from clt_datos_int;
