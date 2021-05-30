@@ -1,0 +1,22 @@
+Primero se analizó de que tabla se puede obtener los correos,
+la cual es la tablaclt_contactabilidad.
+
+Todos los dominios tienen una
+característica en común; siempre
+stán localizados después del ‘@’.
+
+Teniendo esto en cuenta, podemos encontrar el dominio de los correos
+Utilizando la función ‘SUBSTRING’ para localizar el código, y la función
+‘LOCATE’ para encontrar la posición donde se encuentra el ‘@’.
+
+Debido a que si LOCATE no encuentra el '@' regresa como resultado 0,lo cual es erroneo y provoca que
+el metodo substring regrese tambien los números telefonicos. Para prevenir esta situacion usamos la
+condicional where clt_tipo_contact=1, asi solo se usaran los campos donde hay correos.
+
+Para obtener el número total de cada dominio seutilizó la función GROUP BY y de nuevo la función
+SUBSTRING con las mismas líneas que se utilizaron
+Antes. También se utilizo la funcióncount para establecer la nueva columna que
+sumara todas las veces que aparecen los dominios en la tabla.
+
+
+
