@@ -1,8 +1,5 @@
 use jedianalytics;
 
-alter table clt_datos_int
-add columns (anio_nac string, iniciales string);
-
 insert overwrite table clt_datos_int
 select  cod_cliente,
 clt_nombre,
