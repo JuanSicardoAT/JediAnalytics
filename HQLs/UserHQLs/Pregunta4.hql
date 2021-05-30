@@ -1,6 +1,6 @@
 USE jedianalytics;
 
-CREATE TABLE IF NOT EXISTS edad
+CREATE TABLE IF NOT EXISTS edad AS
 SELECT cod_cliente, year(current_date()) - year(clt_fec_nac) 
 +
 if(date_format(current_date(), "%M %d") > date_format(clt_fec_nac, "%M %d"), 0, -1 )
