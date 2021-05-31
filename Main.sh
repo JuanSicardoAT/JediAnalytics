@@ -130,7 +130,7 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     ;;
 
   12)
-    echo GOODBYE_MESSAGE
+    echo "$GOODBYE_MESSAGE"
     exit
     ;;
 
