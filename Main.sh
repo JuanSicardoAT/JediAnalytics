@@ -11,7 +11,7 @@ MENU_OPTIONS=("Subir archivos a HDFS" "Borrar archivos de HDFS"
   "Crear base de datos en Hive" "Borrar base de datos en Hive"
   "Crear tablas externas en Hive" "Borrar tablas externas en Hive"
   "Crear tablas internas en Hive" "Borrar tablas internas en Hive"
-  "Ejecutar un HQL" "Ejecutar todos los HQLs" "Salir")
+  "Ejecutar un HQL" "Ejecutar todos los HQLs" "Rango de edad" "Salir")
 
 GOODBYE_MESSAGE="--Saliendo"
 
@@ -121,6 +121,17 @@ select selectedOption in "${MENU_OPTIONS[@]}"; do
     echo "$SELECT_CONFIRMATION_MESSAGE$selectedOption"
     askConfirmation
     ./${BASH_FILES_HOME}ExecuteAllHQLs.sh
+    ;;
+
+  11)
+    echo "SELECT_CONFIRMATION_MESSAGE$selectedOption"
+    askConfirmation
+    ./${BASH_FILES_HOME}GetAgeRangeEmail.sh
+    ;;
+
+  12)
+    echo "$GOODBYE_MESSAGE"
+    exit
     ;;
 
   *)
