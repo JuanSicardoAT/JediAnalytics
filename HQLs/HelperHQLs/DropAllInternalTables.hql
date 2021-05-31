@@ -13,3 +13,4 @@ DROP TABLE IF EXISTS edad;
 DROP TABLE IF EXISTS iniciales_anio;
 DROP TABLE IF EXISTS clt_documentos_general;
 DROP TABLE IF EXISTS clt_personal;
+DROP TABLE IF EXISTS email_edad;
