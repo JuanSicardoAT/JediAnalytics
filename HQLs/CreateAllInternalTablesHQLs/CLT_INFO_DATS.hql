@@ -15,9 +15,9 @@ numCuenta string
 STORED AS orc;
 
 INSERT OVERWRITE TABLE CLT_INFO_DATS
-SELECT datos.cod_cliente, cat_tipo_clt.descripcion, datos.clt_nombre,
+SELECT datos.cod_cliente, cliente.descripcion, datos.clt_nombre,
 datos.clt_apellido_paterno, datos.clt_apellido_materno, datos.clt_fec_nac,
-datos.clt_sexo, datos.clt_pais_nac, doc.pasaporte, contac.email, relacion.numCuenta
+datos.clt_sexo, datos.clt_pais_nac, doc.clt_numdoc, contac.clt_contac, relacion.numCuenta
 
 FROM clt_datos datos
 join cat_tipo_clt cliente
