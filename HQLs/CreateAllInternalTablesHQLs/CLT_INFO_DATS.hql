@@ -14,7 +14,12 @@ numCuenta string
 )
 STORED AS orc;
 
-FROM equipo5.clt_datos datos
+INSERT OVERWRITE TABLE CLT_INFO_DATS
+SELECT datos.cod_cliente, cat_tipo_clt.descripcion, datos.clt_nombre,
+datos.clt_apellido_paterno, datos.clt_apellido_materno, datos.clt_fec_nac,
+datos.clt_sexo, datos.clt_pais_nac, doc.pasaporte, contac.email, relacion.numCuenta
+
+FROM clt_datos datos
 join cat_tipo_clt cliente
 on datos.clt_tipo = cliente.clt_tipo
 
