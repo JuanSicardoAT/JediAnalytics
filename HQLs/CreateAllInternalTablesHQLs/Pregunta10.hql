@@ -1,10 +1,10 @@
 USE jedianalytics;
 
-CREATE TABLE IF NOT EXISTS email_edad{
+CREATE TABLE IF NOT EXISTS email_edad (
     cod_cliente string,
     clt_contac string,
     edad int
-}
+)
 STORED AS parquet;
 
 INSERT OVERWRITE TABLE email_edad SELECT datos.cod_cliente,
